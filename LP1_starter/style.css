@@ -123,7 +123,7 @@ main {
 a,
 button,
 input {
-  outline: 2px solid red;
+  outline: none;
 }
 
 footer {
