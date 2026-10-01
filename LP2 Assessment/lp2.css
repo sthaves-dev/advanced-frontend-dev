@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .card{
     position: center; /* change table properties */
 	width: fit-content;
@@ -27,4 +28,35 @@ section{
 	margin: auto;
 	width: 200px;
 	height: 200px;
+=======
+.card{
+    position: center; /* change table properties */
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px;
+}
+
+main{
+	background-color:bisque;
+}
+
+
+.card:hover{
+	box-shadow: 4px 8px 12px,
+	4px 8px 12px;
+}
+
+section{
+	border-radius: 12px;
+	color: black;
+	border-style: solid;
+	margin: auto;
+}
+
+.image1{
+	margin: auto;
+	width: 200px;
+	height: 200px;
+>>>>>>> bbbda8be149b568530ef66dfc889714fe42646a7
 }
