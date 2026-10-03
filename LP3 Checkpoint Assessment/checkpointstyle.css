@@ -1,0 +1,16 @@
+body{
+    background-color:gray;
+}
+
+.button{
+    background-color:black;
+    color:white;
+    border: 2px solid purple;
+    border-radius: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+
+.font{
+    font-family: 'Baumans', sans-serif;
+}
