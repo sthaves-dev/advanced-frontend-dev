@@ -1,8 +1,33 @@
-section{
+.section{
     background-image: url("glaciers.jpg"); /*Image by <a href="https://pixabay.com/users/marcogrocha-331573/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=389308">marcogrocha</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=389308">Pixabay</a>*/
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid lightblue;
+    padding: 50px;
+    margin: 20px;
 }
 
 .button{
-    background-color:aqua;
+    background-color:lightblue;
+    color:black;
     border: 2px white solid;
+    text-align: center;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.header{
+    background-color: lightblue;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 15px;
+    padding: 50px;
+    margin: 20px;
 }
