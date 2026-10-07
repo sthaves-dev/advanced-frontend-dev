@@ -33,6 +33,16 @@
     font-family: "Baumans", sans-serif;
 }
 
+.nav-links{
+    margin-top: 20px;
+}
+
+.nav-links:hover{
+    transition: width 2s, height 2s;
+    width: 60px;
+    height: 40px;
+}
+
 .section{
     display: block;
     justify-content: center;
