@@ -56,6 +56,6 @@
 }
 
 @keyframes colorchange{
-    from {background-color: rgb(159, 159, 143)}
-    to {background-color: rgb(196, 127, 215)}
+    from {background-color: rgb(159, 159, 143);}
+    to {background-color: rgb(196, 127, 215);}
 }
