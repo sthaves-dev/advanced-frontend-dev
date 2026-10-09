@@ -10,6 +10,12 @@
     animation-duration: 4s;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .section {
+    transition: none;
+  }
+}
+
 @keyframes pulse{
     from {background-color: lightblue;}
     to {background-color: white;}
