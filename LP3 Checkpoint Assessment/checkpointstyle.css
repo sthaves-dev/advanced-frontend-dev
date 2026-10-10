@@ -43,6 +43,24 @@
     height: 40px;
 }
 
+.nav-links:focus{
+    transition: width 2s, height 2s;
+    width: 60px;
+    height: 40px;
+}
+
+.neonsign{
+    width: 200px;
+    height: 150px;
+}
+
+.neonsign:hover{
+    transition: width 2s, height 2s;
+    transition-timing-function: ease-in-out;
+    width: 250px;
+    height: 200px;
+}
+
 .section{
     display: block;
     justify-content: center;
@@ -53,6 +71,12 @@
     border-color: purple;
     animation-name: colorchange;
     animation-duration: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section {
+    transition: none;
+  }
 }
 
 @keyframes colorchange{
