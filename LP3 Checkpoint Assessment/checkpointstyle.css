@@ -61,6 +61,13 @@
     height: 200px;
 }
 
+.neonsign:focus{
+    transition: width 2s, height 2s;
+    transition-timing-function: ease-in-out;
+    width: 250px;
+    height: 200px;
+}
+
 .section{
     display: block;
     justify-content: center;
