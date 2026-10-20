@@ -1,0 +1,16 @@
+/* LP4 Formative Lab — starter stylesheet
+   This file intentionally contains only the course-standard baseline reset.
+   Everything else is up to you: use combinators, attribute selectors,
+   pseudo-classes, and pseudo-elements to match the target design —
+   without adding a single class or id attribute to the HTML file. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
