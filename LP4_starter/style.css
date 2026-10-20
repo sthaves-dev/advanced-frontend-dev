@@ -31,4 +31,23 @@ font-style: normal;
 font-display: swap;
 }
 
+h2 + p{
+  font-weight: bolder;
+  color: black;
+}
+
+a[href$="lighthouse-map.pdf"]{
+  color: lightblue;
+}
+
+a[href$="lighthouse-map.pdf"]:hover{
+  color:dodgerblue;
+}
+
+a[article]{
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
