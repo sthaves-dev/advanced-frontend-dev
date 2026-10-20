@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wisconsin Lighthouses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Wisconsin Lighthouses</h1>
+    <p>A traveler's guide to the beacons of Lake Michigan and Lake Superior</p>
+    <nav>
+      <a href="#history">History</a>
+      <a href="#lighthouses">Lighthouses</a>
+      <a href="#visit">Plan a Visit</a>
+      <a href="#subscribe">Newsletter</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="history">
+      <h2>A Coastline Built on Light</h2>
+      <p>Wisconsin's two Great Lakes coastlines are home to more than thirty historic lighthouses, many still standing since the 1800s.</p>
+      <p>Before radio and GPS, these towers were the only thing standing between a ship and disaster on Lake Michigan's rocky shoals.</p>
+      <p>Today, most are preserved as museums, and a handful still guide boats home every night.</p>
+    </section>
+
+    <section id="lighthouses">
+      <h2>Lighthouses Worth the Drive</h2>
+
+      <article>
+        <h3>Rawley Point Light</h3>
+        <p>Located in Point Beach State Forest, this is one of the tallest lighthouses on the Great Lakes.</p>
+        <img src="rawley-point.jpg" alt="Rawley Point Light lighthouse tower on the Lake Michigan shoreline">
+      </article>
+
+      <article>
+        <h3>Cana Island Light</h3>
+        <p>Reachable by a short causeway walk, Cana Island is the most photographed lighthouse in Door County.</p>
+        <img src="cana-island.jpg" alt="Cana Island Light with its causeway walkway in Door County">
+      </article>
+
+      <article>
+        <h3>Split Rock Light</h3>
+        <p>Perched on a cliff above Lake Superior, this lighthouse is one of the most visited attractions on the North Shore.</p>
+        <img src="split-rock.jpg" alt="Split Rock Light on a cliff above Lake Superior">
+      </article>
+
+      <article>
+        <h3>Eagle Bluff Light</h3>
+        <p>Set inside Peninsula State Park, this restored keeper's residence gives visitors a look at 1800s lighthouse life.</p>
+        <img src="eagle-bluff.jpg" alt="Eagle Bluff Light keeper's residence in Peninsula State Park">
+      </article>
+
+      <p>Planning a lighthouse road trip? The Wisconsin Historical Society publishes a free <a href="lighthouse-map.pdf" target="_blank">downloadable map</a> of every public lighthouse in the state.</p>
+    </section>
+
+    <section id="visit">
+      <h2>Plan Your Visit</h2>
+      <p>Most lighthouses are open seasonally, from Memorial Day through early October.</p>
+      <table>
+        <caption>Typical Seasonal Hours</caption>
+        <thead>
+          <tr>
+            <th scope="col">Site</th>
+            <th scope="col">Open</th>
+            <th scope="col">Admission</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rawley Point Light</td>
+            <td>Grounds only</td>
+            <td>Free</td>
+          </tr>
+          <tr>
+            <td>Cana Island Light</td>
+            <td>9am – 5pm</td>
+            <td>$12</td>
+          </tr>
+          <tr>
+            <td>Split Rock Light</td>
+            <td>10am – 6pm</td>
+            <td>$8</td>
+          </tr>
+          <tr>
+            <td>Eagle Bluff Light</td>
+            <td>10am – 4pm</td>
+            <td>$10</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="subscribe">
+      <h2>Get the Lighthouse Newsletter</h2>
+      <p>One email a month — new lighthouse features, seasonal openings, and lightkeeper stories.</p>
+      <form action="/subscribe" method="post">
+        <p>
+          <label for="visitor-name">Name</label>
+          <input type="text" id="visitor-name" name="visitor-name" placeholder="Jane Visitor" required>
+        </p>
+        <p>
+          <label for="visitor-email">Email</label>
+          <input type="email" id="visitor-email" name="visitor-email" placeholder="jane@example.com" required>
+        </p>
+        <p>
+          <label for="visitor-interest">What interests you most?</label>
+          <select id="visitor-interest" name="visitor-interest">
+            <option value="history">Lighthouse history</option>
+            <option value="photography">Photography spots</option>
+            <option value="hiking">Nearby hiking</option>
+          </select>
+        </p>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Wisconsin Lighthouses is an independent traveler's guide and is not affiliated with any lighthouse or historical society.</p>
+    <p>Photos and corrections: <a href="mailto:hello@example.com">hello@example.com</a></p>
+  </footer>
+
+</body>
+</html>
