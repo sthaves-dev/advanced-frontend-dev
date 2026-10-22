@@ -36,16 +36,6 @@ header{
     margin-top: 20px;
 }
 
-.nav-links:hover{
-    transition: width 2s, height 2s;
-    transform: scale(1.2);
-}
-
-.nav-links:focus{
-    transition: width 2s, height 2s;
-    transform: scale(1.2);
-}
-
 .neonsign{
     width: 200px;
     height: 150px;
