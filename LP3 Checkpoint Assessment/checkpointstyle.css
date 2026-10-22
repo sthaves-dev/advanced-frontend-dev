@@ -19,7 +19,7 @@
     font-family: 'Baumans', sans-serif;
 }
 
-.header{
+header{
     background-image: linear-gradient(to bottom, yellow, purple);
     display: block;
     justify-content: center;
@@ -63,7 +63,7 @@
     transform: scale(1.2);
 }
 
-.section{
+main{
     display: block;
     justify-content: center;
     align-items: center;
