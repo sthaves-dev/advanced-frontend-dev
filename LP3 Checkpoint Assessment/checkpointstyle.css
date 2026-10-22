@@ -9,7 +9,7 @@
     height: 30px;
 }
 
-.button:focus-visible{
+.button:focus-visible, .button:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
     transition: width 0.3s, height 0.3s;
     transform: scale(1.2);
@@ -38,14 +38,12 @@
 
 .nav-links:hover{
     transition: width 2s, height 2s;
-    width: 60px;
-    height: 40px;
+    transform: scale(1.2);
 }
 
 .nav-links:focus{
     transition: width 2s, height 2s;
-    width: 60px;
-    height: 40px;
+    transform: scale(1.2);
 }
 
 .neonsign{
@@ -56,15 +54,13 @@
 .neonsign:hover{
     transition: width 2s, height 2s;
     transition-timing-function: ease-in-out;
-    width: 250px;
-    height: 200px;
+    transform: scale(1.2);
 }
 
 .neonsign:focus{
     transition: width 2s, height 2s;
     transition-timing-function: ease-in-out;
-    width: 250px;
-    height: 200px;
+    transform: scale(1.2);
 }
 
 .section{
