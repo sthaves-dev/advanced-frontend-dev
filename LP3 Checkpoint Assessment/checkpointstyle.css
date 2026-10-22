@@ -32,8 +32,13 @@ header{
     font-family: "Baumans", sans-serif;
 }
 
-.nav-links{
+ul li{
     margin-top: 20px;
+}
+
+ul li:focus-visible, ul li:hover{
+    transition: width 0.3s, height 0.3s;
+    transform: scale(1.2);
 }
 
 .neonsign{
