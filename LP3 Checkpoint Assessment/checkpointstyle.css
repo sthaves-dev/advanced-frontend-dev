@@ -21,12 +21,12 @@
 
 .font:hover, .font:focus-visible{
     transition: color 0.3s;
-    color: yellow;
+    color:purple;
     transform: scale(1.04);
 }
 
 header{
-    background-image: linear-gradient(to bottom, yellow, purple);
+    background-image: linear-gradient(to bottom, rgb(255, 215, 0), rgb(230, 206, 243));
     display: block;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ header{
     padding: 50px;
     margin: 20px;
     border-color: purple;
-    color: white;
+    color: black;
     font-family: "Baumans", sans-serif;
 }
 
@@ -53,7 +53,7 @@ main{
     display: block;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     border: 10px solid;
     padding: 50px;
     margin: 20px;
@@ -71,6 +71,6 @@ main{
 }
 
 @keyframes colorchange{
-    from {background-color: rgb(159, 159, 143);}
-    to {background-color: rgb(196, 127, 215);}
+    from {background-color: rgb(255, 215, 0);}
+    to {background-color: rgb(230, 206, 243);}
 }
