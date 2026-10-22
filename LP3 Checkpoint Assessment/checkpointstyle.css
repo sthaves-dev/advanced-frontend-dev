@@ -32,15 +32,6 @@ header{
     font-family: "Baumans", sans-serif;
 }
 
-ul li{
-    margin-top: 20px;
-}
-
-ul li:focus-visible, ul li:hover{
-    transition: width 0.3s, height 0.3s;
-    transform: scale(1.2);
-}
-
 .neonsign{
     width: 200px;
     height: 150px;
