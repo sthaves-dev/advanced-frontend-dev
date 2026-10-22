@@ -51,13 +51,7 @@ header{
     height: 150px;
 }
 
-.neonsign:hover{
-    transition: width 2s, height 2s;
-    transition-timing-function: ease-in-out;
-    transform: scale(1.2);
-}
-
-.neonsign:focus{
+.neonsign:hover, .neonsign:focus-visible{
     transition: width 2s, height 2s;
     transition-timing-function: ease-in-out;
     transform: scale(1.2);
