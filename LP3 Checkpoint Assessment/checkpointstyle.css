@@ -19,6 +19,12 @@
     font-family: 'Baumans', sans-serif;
 }
 
+.font:hover, .font:focus-visible{
+    transition: color 0.3s;
+    color: yellow;
+    transform: scale(1.04);
+}
+
 header{
     background-image: linear-gradient(to bottom, yellow, purple);
     display: block;
@@ -47,6 +53,7 @@ main{
     display: block;
     justify-content: center;
     align-items: center;
+    color: white;
     border: 10px solid;
     padding: 50px;
     margin: 20px;
