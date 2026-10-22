@@ -75,5 +75,4 @@ main{
 @keyframes colorchange{
     from {background-color: rgb(255, 215, 0);}
     to {background-color: rgb(230, 206, 243);}
-    from {background-color: rgb(255, 215, 0);}
 }
