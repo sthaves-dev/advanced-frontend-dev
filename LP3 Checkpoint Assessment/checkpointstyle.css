@@ -76,7 +76,7 @@
     margin: 20px;
     border-color: purple;
     animation-name: colorchange;
-    animation-duration: infinite;
+    animation-duration: 5s;
 }
 
 @media (prefers-reduced-motion: reduce) {
