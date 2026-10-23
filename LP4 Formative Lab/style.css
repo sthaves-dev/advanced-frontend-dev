@@ -65,7 +65,7 @@ a[href$="lighthouse-map.pdf"]{
   color: lightblue;
 }
 
-a[href$="lighthouse-map.pdf"]:hover{
+a[href$="lighthouse-map.pdf"]:hover, a[href$="lighthouse-map.pdf"]:focus-visible{
   color:dodgerblue;
 }
 
