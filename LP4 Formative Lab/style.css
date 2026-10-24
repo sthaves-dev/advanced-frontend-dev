@@ -84,6 +84,15 @@ article {
   gap: 20px;
 }
 
+article:nth-child(odd){
+  background-color: lightblue;
+  opacity: 0.9;
+}
+
+article:nth-child(even){
+  background-color: white;
+}
+
 
 a[href]:focus-visible, a[href]:hover{
   outline: 2px solid dodgerblue;
