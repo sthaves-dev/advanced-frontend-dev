@@ -14,7 +14,11 @@ body {
 
 /* Fixed pixel width — does not adapt to any screen size. */
 .page {
+<<<<<<< HEAD
   width: 960px;
+=======
+  max-width: 100%;
+>>>>>>> 23bd6caf3252b60919ca122c3de118b79f24030f
   margin: 0 auto;
   background: #fff;
 }
