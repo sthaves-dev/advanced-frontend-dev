@@ -58,6 +58,7 @@ body {
 .layout {
   width: 960px;
   overflow: hidden;
+  display: flex;
 }
 
 .content {
@@ -110,7 +111,7 @@ body {
 }
 
 .ticket-btn {
-  display: inline-block;
+  display: flex;
   background: #7a1f1f;
   color: #fff;
   padding: 10px 20px;
