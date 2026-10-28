@@ -133,6 +133,16 @@ body {
   font-size: 14px;
 }
 
+@media (min-width: 1024px) {
+.card-grid { grid-template-columns: repeat(3, 1fr); }
+.hero { min-height: 80vh; }
+}
+
+@media (min-width: 600px) {
+.nav { flex-direction: row; }
+.card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
