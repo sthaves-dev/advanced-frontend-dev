@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.site-header {
+  background: #e19464;
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+  font-family: 'Margarine', sans-serif;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+}
+
+.site-nav {
+  background: #f0f0f0;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 2px solid #e19464;
+}
+
+.site-nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 16px;
+}
+
+.site-nav a:hover, .site-nav a:focus-visible {
+  color: #e19464;
+  text-decoration: underline;
+}
+
+.tagline {
+  font-size: 18px;
+  margin: 0;
+}
