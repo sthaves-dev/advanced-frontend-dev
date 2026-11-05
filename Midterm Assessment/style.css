@@ -24,12 +24,16 @@
   padding: 16px;
   text-align: center;
   border-bottom: 2px solid #e19464;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
 }
 
 .site-nav a {
   color: #333;
   text-decoration: none;
   margin: 0 16px;
+  font-family: 'Margarine', sans-serif;
 }
 
 .site-nav a:hover, .site-nav a:focus-visible {
@@ -40,4 +44,21 @@
 .tagline {
   font-size: 18px;
   margin: 0;
+}
+
+.sidebar {
+  width: 240px;
+  float: left;
+  padding: 24px;
+  background: #f4ede1;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+}
+
+.site-footer {
+  background: peru;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
 }
