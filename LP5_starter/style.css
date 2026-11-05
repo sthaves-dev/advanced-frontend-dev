@@ -18,7 +18,7 @@ body {
 
 /* Fixed pixel width — does not adapt to any screen size. */
 .page {
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   background: #fff;
 }
@@ -35,8 +35,13 @@ body {
   max-width: 100%;
 }
 
+img{
+  width: 100%;
+  height: auto;
+}
+
 .site-header h1 {
-  font-size: clamp(1rem, 4vw, 1.2rem );
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
   margin: 8px 0 4px;
 }
 
@@ -48,6 +53,9 @@ body {
 .site-nav {
   background: #591616;
   padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .site-nav a {
@@ -60,21 +68,15 @@ body {
 
 /* Two fixed-width columns using float — not responsive, and not Flexbox. */
 .layout {
-  width: 960px;
-  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .content {
-  width: 680px;
-  float: left;
   padding: 24px;
 }
 
 .sidebar {
-  width: 240px;
-  float: left;
   padding: 24px;
   background: #f4ede1;
   flex-wrap: wrap;
@@ -102,11 +104,8 @@ body {
 /* Fixed pixel width on content images — will overflow at small
    viewport widths instead of scaling down. */
 .feature-img {
-  max-width: 100%;
-  height: auto;
   border-radius: 6px;
   margin-top: 8px;
-  display: block;
 }
 
 .sidebar h3 {
@@ -139,13 +138,55 @@ body {
 }
 
 @media (min-width: 600px) {
-.site-nav { flex-direction: row; }
-.schedule-card { grid-template-columns: repeat(2, 1fr);}
+.site-nav
+ { flex-direction: row;
+gap: 24px;
+}
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.content h2{
+  flex: 1 1 100%;
+  font-size: 1.5rem;
+}
+
+.schedule-card{
+  flex: 1 1 100%;
+}
+
+.event{
+  flex: 1 1 300px;
+}
+
+.logo{
+  max-width: 400px;
+}
+
 }
 
 @media (min-width: 1024px) {
-.schedule-card { grid-template-columns: repeat(3, 1fr); }
-.site-nav { flex-direction: row; }
+.layout{
+  flex-direction: row;
+}
+
+.content{
+  flex: 3;
+}
+
+.sidebar{
+  flex: 1;
+}
+
+}
+
+@media (min-width: 1200px){
+  .sidebar{
+    flex-direction: row reverse;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
