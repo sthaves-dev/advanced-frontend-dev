@@ -16,7 +16,11 @@
   padding: 24px;
   text-align: center;
   font-family: 'Margarine', sans-serif;
-  font-size: clamp(1rem, 4vw, 1.2rem);
+}
+
+.site-header h1 {
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
+  margin: 8px 0 4px;
 }
 
 .site-nav {
