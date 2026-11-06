@@ -57,6 +57,8 @@
   background: #f4ede1;
   flex-wrap: wrap;
   flex-shrink: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .site-footer {
@@ -67,6 +69,8 @@
   font-size: 14px;
   font-family: sans-serif;
   font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 @media (min-width: 600px) {
