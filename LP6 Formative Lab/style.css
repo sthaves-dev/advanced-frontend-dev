@@ -144,13 +144,13 @@ img{
 
 @media (min-width: 600px) {
 .site-nav
- { flex-direction: row;
-gap: 24px;
+ { display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .content{
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -173,13 +173,14 @@ gap: 24px;
 
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
 .layout{
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .content{
-  flex: 3;
+  flex: 2;
 }
 
 .sidebar{
