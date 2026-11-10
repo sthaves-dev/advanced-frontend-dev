@@ -18,7 +18,7 @@ body {
 }
 
 .site-header {
-  background: #e19464;
+  background-image: linear-gradient(to bottom, #e19464, #ccaf9b);
   color: #fff;
   padding: 24px;
   text-align: center;
@@ -28,6 +28,7 @@ body {
 img{
   width: 100%;
   height: auto;
+  box-shadow: 0 4px 8px rgba(0.3, 0.3, 0.3, 0.3);
 }
 
 .feature-img {
