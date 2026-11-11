@@ -22,7 +22,7 @@ body {
   color: #fff;
   padding: 24px;
   text-align: center;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   display: flex;
 }
 
@@ -50,8 +50,8 @@ img{
   background: #591616;
   padding: 12px 24px;
   display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .site-nav a {
@@ -65,7 +65,8 @@ img{
 /* Two fixed-width columns using float — not responsive, and not Flexbox. */
 .layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .content {
@@ -76,7 +77,7 @@ img{
   padding: 24px;
   background: #f4ede1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .schedule-card {
@@ -117,7 +118,7 @@ img{
 
 .ticket-btn {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   flex-wrap: wrap;
   background: #7a1f1f;
   color: #fff;
@@ -135,13 +136,13 @@ img{
   padding: 16px;
   font-size: 14px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media (min-width: 600px) {
 .site-nav
  { display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .content{
@@ -170,18 +171,23 @@ img{
 }
 
 @media (min-width: 900px) {
-.layout{
+.page {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+  'header header'
+  'nav nav '
+  'sidebar main '
+  'footer footer';
+  min-height: 100vh;
 }
 
-.content{
-  flex: 2;
-}
-
-.sidebar{
-  flex: 1;
-}
+.header { grid-area: header; }
+.nav { grid-area: nav; }
+.sidebar{ grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
 
 }
 
