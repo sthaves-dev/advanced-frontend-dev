@@ -11,18 +11,30 @@ body {
   background: #faf6ef;
 }
 
-.page {
+.page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    'header header'
+    'nav nav'
+    'main sidebar'
+    'footer footer';
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   background: #fff;
 }
 
-.site-header {
+.header {
+  grid-area: header;
   background-image: linear-gradient(to bottom, #e19464, #ccaf9b);
   color: #fff;
   padding: 24px;
   text-align: center;
   font-family: 'Margarine', sans-serif;
+  border-radius: 8px;
+  display: grid;
 }
 
 img{
@@ -36,12 +48,13 @@ img{
   margin-top: 8px;
 }
 
-.site-header h1 {
+.header h1 {
   font-size: clamp(1.5rem, 5vw, 3.5rem);
   margin: 8px 0 4px;
 }
 
-.site-nav {
+.nav {
+  grid-area: nav;
   background: #f0f0f0;
   padding: 16px;
   text-align: center;
@@ -49,16 +62,17 @@ img{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  border-radius: 8px;
 }
 
-.site-nav a {
+.nav a {
   color: #333;
   text-decoration: none;
   margin: 0 16px;
   font-family: 'Margarine', sans-serif;
 }
 
-.site-nav a:hover, .site-nav a:focus-visible {
+.nav a:hover, .nav a:focus-visible {
   color: #e19464;
   text-decoration: underline;
 }
@@ -67,6 +81,14 @@ img{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  flex-direction: column;
+}
+
+.main {
+  grid-area: main;
+  padding: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
   flex-direction: column;
 }
 
@@ -85,7 +107,28 @@ img{
   grid-template-columns: repeat(2, 1fr);
 }
 
-.site-footer {
+.schedule-card {
+  border: 1px solid #e2d8c8;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.schedule-card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #e19464;
+}
+
+.schedule-card p,
+.schedule-card li {
+  font-size: 16px;
+}
+
+.footer {
+  grid-area: footer;
   background: peru;
   color: white;
   text-align: center;
@@ -100,9 +143,15 @@ img{
 @media (min-width: 600px) {
 .layout{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+  'header '
+  'nav '
+  'sidebar '
+  'main '
+  'footer ';
   gap: 20px;
-  flex-direction: row;
 }
 
 }
@@ -117,6 +166,7 @@ img{
   'nav nav '
   'sidebar main '
   'footer footer';
+  gap: 20px;
   min-height: 100vh;
 }
 
@@ -126,7 +176,7 @@ img{
 .main { grid-area: main; }
 .footer { grid-area: footer; }
 
-.content{
+.main{
   flex: 2;
 }
 

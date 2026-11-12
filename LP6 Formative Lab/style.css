@@ -11,19 +11,30 @@ body {
 }
 
 /* Fixed pixel width — does not adapt to any screen size. */
-.page {
+.page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    'header header'
+    'nav nav'
+    'main sidebar'
+    'footer footer';
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   background: #fff;
 }
 
-.site-header {
+.header {
+  grid-area: header;
   background: #7a1f1f;
   color: #fff;
   padding: 24px;
   text-align: center;
   grid-template-columns: repeat(2, 1fr);
-  display: flex;
+  display: grid;
+  flex-direction: column;
 }
 
 .logo {
@@ -46,15 +57,16 @@ img{
   margin: 0;
 }
 
-.site-nav {
+.nav {
+  grid-area: nav;
   background: #591616;
   padding: 12px 24px;
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.site-nav a {
+.nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -69,11 +81,16 @@ img{
   gap: 20px;
 }
 
-.content {
+.main {
+  grid-area: main;
   padding: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  flex-direction: column;
 }
 
 .sidebar {
+  grid-area: sidebar;
   padding: 24px;
   background: #f4ede1;
   display: grid;
@@ -86,7 +103,7 @@ img{
   padding: 16px;
   margin-bottom: 16px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .schedule-card h3 {
@@ -129,7 +146,8 @@ img{
   margin-bottom: 16px;
 }
 
-.site-footer {
+.footer {
+  grid-area: footer;
   background: #2b2118;
   color: #ccc;
   text-align: center;
@@ -137,48 +155,33 @@ img{
   font-size: 14px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
 }
 
 @media (min-width: 600px) {
-.site-nav
- { display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.content{
-  display: flex;
-  flex-wrap: wrap;
+.layout{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+  'header '
+  'nav '
+  'sidebar '
+  'main '
+  'footer ';
   gap: 20px;
 }
-
-.content h2{
-  flex: 1 1 100%;
-  font-size: 1.5rem;
-}
-
-.schedule-card{
-  flex: 1 1 100%;
-}
-
-.event{
-  flex: 1 1 300px;
-}
-
-.logo{
-  max-width: 400px;
-}
-
 }
 
 @media (min-width: 900px) {
-.page {
+.page-grid {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 20px;
   grid-template-areas:
   'header header'
   'nav nav '
-  'sidebar main '
+  'main sidebar '
   'footer footer';
   min-height: 100vh;
 }
@@ -189,12 +192,13 @@ img{
 .main { grid-area: main; }
 .footer { grid-area: footer; }
 
+.main{
+  flex: 2;
 }
 
-@media (min-width: 1200px){
-  .sidebar{
-    flex-direction: row-reverse;
-  }
+.sidebar{
+  flex: 1;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
