@@ -13,7 +13,7 @@ body {
 
 .page-grid > .main, .page-grid > .sidebar {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2 1fr;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
     'header header'
@@ -83,7 +83,8 @@ img{
 
 .layout {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2 1fr;
+  grid-template-rows: auto auto 1fr auto;
   gap: 24px;
 }
 
@@ -148,7 +149,7 @@ img{
 @media (min-width: 300px) {
   .layout {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1, 1fr;
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
       'header '
@@ -163,7 +164,7 @@ img{
 @media (min-width: 600px) {
 .layout{
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1, 1fr;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
   'header '
@@ -179,7 +180,7 @@ img{
 @media (min-width: 900px) {
 .layout {
   display: grid;
-  grid-template-columns: repeat (2, 1fr);
+  grid-template-columns: 2 1fr;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
   'header header'
