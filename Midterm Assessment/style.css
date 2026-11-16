@@ -11,7 +11,7 @@ body {
   background: #faf6ef;
 }
 
-.page-grid {
+.page-grid > .main, .page-grid > .sidebar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto 1fr auto;
@@ -34,7 +34,9 @@ body {
   text-align: center;
   font-family: 'Margarine', sans-serif;
   border-radius: 8px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img{
@@ -59,8 +61,7 @@ img{
   padding: 16px;
   text-align: center;
   border-bottom: 2px solid #e19464;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 1.5rem;
   border-radius: 8px;
 }
@@ -83,15 +84,14 @@ img{
 .layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  flex-direction: column;
+  gap: 24px;
 }
 
 .main {
   grid-area: main;
   padding: 24px;
-  grid-template-columns: repeat(2, 1fr);
-  display: grid;
+  display: flex;
+  gap: 24px;
   flex-direction: column;
 }
 
@@ -104,10 +104,9 @@ img{
   width: 240px;
   padding: 24px;
   background: #f4ede1;
-  flex-wrap: wrap;
-  flex-shrink: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .schedule-card {
@@ -115,8 +114,9 @@ img{
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   box-shadow: 0 4px 8px rgba(0.3, 0.3, 0.3, 0.3);
 }
 
@@ -140,8 +140,9 @@ img{
   font-size: 14px;
   font-family: sans-serif;
   font-weight: bold;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 @media (min-width: 600px) {
@@ -179,14 +180,6 @@ img{
 .sidebar{ grid-area: sidebar; }
 .main { grid-area: main; }
 .footer { grid-area: footer; }
-
-.main{
-  flex: 2;
-}
-
-.sidebar{
-  flex: 1;
-}
 
 }
 
