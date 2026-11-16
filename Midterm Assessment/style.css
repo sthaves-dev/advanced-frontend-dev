@@ -145,6 +145,21 @@ img{
   gap: 24px;
 }
 
+@media (min-width: 300px) {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      'header '
+      'nav '
+      'sidebar '
+      'main '
+      'footer ';
+    gap: 20px;
+  }
+}
+
 @media (min-width: 600px) {
 .layout{
   display: grid;
