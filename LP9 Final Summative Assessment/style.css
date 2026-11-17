@@ -41,7 +41,7 @@ body {
 }
 
 img{
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
@@ -122,7 +122,7 @@ img{
 }
 
 .schedule-card {
-  border: 1px solid #e2d8c8;
+  border: 0.5px solid white;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
@@ -146,6 +146,11 @@ img{
 .schedule-card p,
 .schedule-card li {
   font-size: 16px;
+}
+
+.schedule-card.event{
+    width: fit-content;
+    height: fit-content;
 }
 
 .footer {
