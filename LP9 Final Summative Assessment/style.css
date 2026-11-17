@@ -151,7 +151,8 @@ img{
 .footer {
   grid-area: footer;
   background: #536AED;
-  color: white;
+  color: black;
+  text-shadow: 1px 1px 2px white;
   text-align: center;
   padding: 16px;
   font-size: 14px;
