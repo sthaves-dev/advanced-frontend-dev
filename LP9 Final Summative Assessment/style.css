@@ -11,8 +11,222 @@ body {
   background: lightgray;
 }
 
+.page-grid > .main, .page-grid > .sidebar {
+  display: grid;
+  grid-template-columns: 2 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    'header header'
+    'nav nav'
+    'main sidebar'
+    'footer footer';
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+}
+
 .header{
-    padding: 24px;
-    text-align: center;
-    font-family: 'Andika', sans-serif;
+  grid-area: header;
+  padding: 24px;
+  text-align: center;
+  font-family: 'Andika', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 14px;
+  background-image: linear-gradient(to right, #5B2A9B, #3FBDE0, #536AED);
+  color: black;
+  text-shadow: 1px 1px 2px white;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.feature-img {
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.header h1 {
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
+  margin: 8px 0 4px;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin: 4px 0;
+  font-weight: bold;
+}
+
+.nav {
+  grid-area: nav;
+  background: #f0f0f0;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 2px solid #5B2A9B;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 14px;
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 16px;
+  font-family: 'Andika', sans-serif;
+  font-weight: bold;
+}
+
+.nav a:hover, .nav a:focus-visible {
+  color: #5B2A9B;
+  text-decoration: underline;
+  animation-name: colorchange;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 24px;
+}
+
+.main {
+  grid-area: main;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.tagline {
+  font-size: 18px;
+  margin: 0;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  width: 240px;
+  padding: 24px;
+  background: #f4ede1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 14px;
+}
+
+.schedule-card {
+  border: 1px solid #e2d8c8;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 4px 8px #5B2A9B;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.schedule-card:hover {
+  box-shadow: 0 8px 16px #536AED;
+}
+
+.schedule-card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #5B2A9B;
+}
+
+.schedule-card p,
+.schedule-card li {
+  font-size: 16px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #536AED;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+@media (min-width: 300px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 1, 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      'header '
+      'nav '
+      'sidebar '
+      'main '
+      'footer ';
+    gap: 20px;
+  }
+}
+
+@media (min-width: 600px) {
+.layout{
+  display: grid;
+  grid-template-columns: 1, 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+  'header '
+  'nav '
+  'sidebar '
+  'main '
+  'footer ';
+  gap: 20px;
+}
+
+}
+
+@media (min-width: 900px) {
+.layout {
+  display: grid;
+  grid-template-columns: 2 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+  'header header'
+  'nav nav '
+  'sidebar main '
+  'footer footer';
+  gap: 20px;
+  min-height: 100vh;
+}
+
+.header { grid-area: header; }
+.nav { grid-area: nav; }
+.sidebar{ grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+}
+
+@keyframes colorchange {
+  0% { color: #5B2A9B; }
+  25% { color: #3FBDE0; }
+  50% { color: #536AED; }
+  75% { color: #3FBDE0; }
+  100% { color: #5B2A9B; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    animation-iteration-count: 1 !important;
+  }
 }
