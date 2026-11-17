@@ -160,6 +160,7 @@ img{
   display: flex;
   flex-direction: row;
   gap: 24px;
+  font-family: 'Andika', sans-serif;
 }
 
 @media (min-width: 300px) {
