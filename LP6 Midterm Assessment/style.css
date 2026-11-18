@@ -15,11 +15,11 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-  'header'
-  'nav'
-  'main'
-  'sidebar'
-  'footer';
+  'header '
+  'nav '
+  'sidebar '
+  'main '
+  'footer ';
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -101,6 +101,22 @@ img{
   margin: 0;
 }
 
+.sidebar {
+  grid-area: sidebar;
+  width: 240px;
+  padding: 24px;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0.3, 0.3, 0.3, 0.3);
+}
+
+.sidebar h2{
+  color:#893101;
+}
+
 .schedule-card {
   border: 1px solid #e2d8c8;
   border-radius: 8px;
@@ -146,6 +162,7 @@ img{
   grid-template-areas:
   'header '
   'nav '
+  'sidebar '
   'main '
   'footer ';
 }
@@ -160,6 +177,7 @@ img{
   grid-template-areas:
   'header '
   'nav '
+  'sidebar '
   'main '
   'footer ';
 }
@@ -171,14 +189,15 @@ img{
 .page-grid {
   grid-template-columns: 1fr 240px;
   grid-template-areas:
-  'header header'
-  'nav nav'
-  'main main'
-  'footer footer';
+  'header header '
+  'nav nav '
+  'main sidebar '
+  'footer footer ';
 }
 
 .header { grid-area: header; }
 .nav { grid-area: nav; }
+.sidebar { grid-area: sidebar;}
 .main { grid-area: main; }
 .footer { grid-area: footer; }
 
