@@ -11,15 +11,16 @@ body {
 }
 
 /* Fixed pixel width — does not adapt to any screen size. */
-.page-grid > .main, .page-grid > .sidebar {
+.page-grid{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas:
-    'header header'
-    'nav nav'
-    'main sidebar'
-    'footer footer';
+    'header '
+    'nav '
+    'sidebar '
+    'main '
+    'footer ';
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -62,7 +63,9 @@ img{
   background: #591616;
   padding: 12px 24px;
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -73,11 +76,8 @@ img{
   margin-right: 24px;
 }
 
-/* Two fixed-width columns using float — not responsive, and not Flexbox. */
-.layout {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+.nav a:hover, .nav a:focus-visible{
+  color:darkgoldenrod;
 }
 
 .main {
@@ -93,7 +93,7 @@ img{
   background: #f4ede1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  margin-right: 20px;
 }
 
 .schedule-card {
@@ -103,7 +103,6 @@ img{
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
 }
 
 .schedule-card h3 {
@@ -136,7 +135,6 @@ img{
 .ticket-btn {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   background: #7a1f1f;
   color: #fff;
   padding: 10px 20px;
@@ -155,43 +153,29 @@ img{
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
 }
 
 @media (min-width: 600px) {
-.layout{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-areas:
-  'header '
-  'nav '
-  'sidebar '
-  'main '
-  'footer ';
-  gap: 24px;
+.nav{
+  flex-direction: row;
 }
+
+.sidebar{
+  margin-left: 20px;
+}
+
 }
 
 @media (min-width: 900px) {
+
 .page-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto auto 1fr auto;
-  gap: 20px;
+  grid-template-columns: 1fr 240px;
   grid-template-areas:
-  'header header'
+  'header header '
   'nav nav '
   'main sidebar '
-  'footer footer';
-  min-height: 100vh;
+  'footer footer ';
 }
-
-.header { grid-area: header; }
-.nav { grid-area: nav; }
-.sidebar{ grid-area: sidebar; }
-.main { grid-area: main; }
-.footer { grid-area: footer; }
 
 }
 
